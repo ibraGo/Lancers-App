@@ -20,6 +20,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //callback url added by @blinshine
-        'rave/callback'
+        'rave/callback',
+        '/projects*'
     ];
 }

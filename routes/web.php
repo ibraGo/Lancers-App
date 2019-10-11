@@ -49,5 +49,11 @@ Route::post('tasks', 'TaskController@createTask')->middleware('auth');
 Route::put('tasks/{id}', 'TaskController@updateTask')->middleware('auth');
 Route::delete('tasks/{id}','TaskController@deleteTask')->middleware('auth');
 
+Route::get('projects/{user_id}','ProjectController@index');
+Route::get('projects/detail/{id}', 'ProjectController@show');
+Route::post('projects', 'ProjectController@store');
+Route::put('projects/{id}', 'ProjectController@update');
+Route::delete('projects/{id}','ProjectController@destroy');
+
 
 

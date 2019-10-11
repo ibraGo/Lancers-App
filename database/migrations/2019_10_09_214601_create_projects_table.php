@@ -15,8 +15,9 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
             $table->integer('user_id');
-            $table->integer('client_id');
+            $table->integer('client_id')->nullable();
             $table->integer('estimate_id')->nullable();
             $table->string('tracking_code')->nullable();
             $table->integer('invoice_id')->nullable();
